@@ -1,0 +1,26 @@
+Why is it a bad idea to use a recursion method to find the fibonacci of a number?
+Finding the fibonacci of a number recursively without using dynamic programming (memoization) is 
+costly in terms of time complexity. For example, let's look at the following solution in python 
+
+def Fibonacci(n):
+    # First Fibonacci number is 0
+    if n==1:
+        return 0
+    # Second Fibonacci number is 1
+    elif n==2:
+        return 1
+    else:
+        return Fibonacci(n-1)+Fibonacci(n-2)
+ 
+Assuming that the input was 5. To calculate the fib of 5, we will need to calculate the fib(4) and 
+fib(3). Then, we will have a tree where we will calculate the fib(sub_n) more than 2 times which costs 
+exponential run time O(2^n). In terms of space, recursive functions do use a “call stack” which costs
+ extra space to perform recursion.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
